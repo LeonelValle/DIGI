@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>\\mex-app-001\MEI_Apps\DIGI\SetupDIGISensor\|\\192.168.4.5\digi\|publish\</PublishUrlHistory>
+    <InstallUrlHistory>http://localhost/DIGISensor/|http://localhost/DIGIShpping/</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory>\\192.168.4.5\digi\|http://localhost/DIGISensor/|http://localhost/DIGIShpping/</UpdateUrlHistory>
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>true</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>

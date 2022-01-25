@@ -1,0 +1,21 @@
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\bin\Debug\DIGI-Sensor 3 test.exe.config
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\bin\Debug\DIGI-Sensor 3 test.exe.manifest
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\bin\Debug\DIGI-Sensor 3 test.application
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\bin\Debug\DIGI-Sensor 3 test.exe
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\bin\Debug\DIGI-Sensor 3 test.pdb
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\obj\Debug\DIGI-Sensor - Copy.csprojAssemblyReference.cache
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\obj\Debug\DIGI_Sensor.Batch.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\obj\Debug\DIGI_Sensor.Check_Test.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\obj\Debug\DIGI_Sensor.ChooseTest.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\obj\Debug\DIGI_Sensor.Employee.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\obj\Debug\DIGI_Sensor.Login.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\obj\Debug\DIGI_Sensor.MainMenu.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\obj\Debug\DIGI_Sensor.Properties.Resources.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\obj\Debug\DIGI_Sensor.Reports.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\obj\Debug\DIGI-Sensor - Copy.csproj.GenerateResource.cache
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\obj\Debug\DIGI-Sensor - Copy.csproj.CoreCompileInputs.cache
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\obj\Debug\DIGI-Sensor 3 test.TrustInfo.xml
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\obj\Debug\DIGI-Sensor 3 test.exe.manifest
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\obj\Debug\DIGI-Sensor 3 test.application
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\obj\Debug\DIGI-Sensor 3 test.exe
+C:\Users\leonel.valle\source\repos\DIGI_Project\DIGI-Sensor\obj\Debug\DIGI-Sensor 3 test.pdb

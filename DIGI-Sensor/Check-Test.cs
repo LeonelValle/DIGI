@@ -1,0 +1,168 @@
+﻿using System;
+using System.Windows.Forms;
+
+namespace DIGI_Sensor
+{
+    public partial class Check_Test : Form
+    {
+        RF rf = new RF();
+        Current current = new Current();
+        Nist nist = new Nist();
+        Test test = new Test();
+        Operador operador = new Operador();
+        ColdSoak coldSoak = new ColdSoak();
+
+
+        public Check_Test()
+        {
+            InitializeComponent();
+        }
+
+        private void Check_Test_Load(object sender, EventArgs e)
+        {
+            operador.Id_operador = int.Parse(operador.ReturnID("select id_operador from tb_Operador where numeroempleado = '" + operador.Numeroempleado + "'"));
+
+            if (test.Selected == true)
+            {
+                pb_coldsoak.Visible = false;
+                label4.Visible = false;
+            }
+
+
+            pb_rf.Image = DIGI_Sensor.Properties.Resources._69_692608_transparent_answer_icon_png_check_pass_icon_png;
+            pb_nist.Image = DIGI_Sensor.Properties.Resources._69_692608_transparent_answer_icon_png_check_pass_icon_png;
+            pb_current.Image = DIGI_Sensor.Properties.Resources._69_692608_transparent_answer_icon_png_check_pass_icon_png;
+            pb_coldsoak.Image = DIGI_Sensor.Properties.Resources._69_692608_transparent_answer_icon_png_check_pass_icon_png;
+
+        }
+
+        private void btn_Check_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                rf.Status = rf.ReturnValue("select TOP 1 status from Test_RF where Serialnumber ='" + txt_Serialnumber.Text.Trim() + "' order by id_rf desc");
+                current.Status = current.ReturnValue("select TOP 1 status from Test_Current where Serialnumber ='" + txt_Serialnumber.Text.Trim() + "' order by id_current desc");
+                nist.Status = nist.ReturnValue("select TOP 1 status from Test_Nist where Serialnumber ='" + txt_Serialnumber.Text.Trim() + "' order by id_nist desc");
+                coldSoak.Status = coldSoak.ReturnValue("select TOP 1 status from Test_coldsoak where Serialnumber ='" + txt_Serialnumber.Text.Trim() + "' order by id_coldsoak desc");
+
+                #region if para ver si pasaron las pruebas
+                if (rf.Status == "Passed")
+                {
+                    pb_rf.Image = DIGI_Sensor.Properties.Resources._69_692608_transparent_answer_icon_png_check_pass_icon_png;
+                    rf.Rf = true;
+                }
+                else
+                {
+                    pb_rf.Image = DIGI_Sensor.Properties.Resources.images__1_;
+                    rf.Rf = false;
+                }
+                if (current.Status == "Passed" || current.Status == "PASS")
+                {
+                    pb_current.Image = DIGI_Sensor.Properties.Resources._69_692608_transparent_answer_icon_png_check_pass_icon_png;
+                    current.CURRENT1 = true;
+                }
+                else
+                {
+                    pb_current.Image = DIGI_Sensor.Properties.Resources.images__1_;
+                    current.CURRENT1 = false;
+                }
+                if (nist.Status == "Passed")
+                {
+                    pb_nist.Image = DIGI_Sensor.Properties.Resources._69_692608_transparent_answer_icon_png_check_pass_icon_png;
+                    nist.Nists = true;
+                }
+                else
+                {
+                    pb_nist.Image = DIGI_Sensor.Properties.Resources.images__1_;
+                    nist.Nists = false;
+
+                }
+                if (test.Selected == false)
+                {
+
+                    if (coldSoak.Status == "PASS" || coldSoak.Status == "Passed" || coldSoak.Status == "Pass - Level 1" || coldSoak.Status == "Pass - Level 2" || coldSoak.Status == "Pass - Level 3" || coldSoak.Status == "Pass - Level 4" || coldSoak.Status == "Pass - Level 5")
+                    {
+                        pb_coldsoak.Image = DIGI_Sensor.Properties.Resources._69_692608_transparent_answer_icon_png_check_pass_icon_png;
+                        coldSoak.COLDSOAK1 = true;
+                    }
+                    else
+                    {
+                        pb_coldsoak.Image = DIGI_Sensor.Properties.Resources.images__1_;
+                        coldSoak.COLDSOAK1 = false;
+                    }
+                }
+                #endregion
+
+                #region if para cambiar las imagenes y mostrar los mensajes de alerta
+                if (rf.Rf == true && current.CURRENT1 == true && nist.Nists == true && coldSoak.COLDSOAK1 == true)
+                {
+                    txt_Serialnumber.Text = "";
+                    txt_Serialnumber.Focus();
+                }
+                else if (rf.Rf != true)
+                {
+                    MessageBox.Show("Falla de RF", "Falla", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+                else if (current.CURRENT1 != true)
+                {
+                    MessageBox.Show("Falla de Current", "Falla", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (nist.Nists != true)
+                {
+                    MessageBox.Show("Falla de NIST", "Falla", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (test.Selected == false && coldSoak.COLDSOAK1 != true && coldSoak.COLDSOAK1 == false)
+                {
+                    //GetStatus();
+                    MessageBox.Show("Falla de Cold Soak /n Failed Type: " + coldSoak.Status, "Falla", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+                #endregion
+
+                //if (rf.Existe("select count(*) from Test_RF where Serialnumber = '" + txt_Serialnumber.Text.Trim() + "'") &&
+                //    current.Existe("select count(*) from Test_Current where Serialnumber = '" + txt_Serialnumber.Text.Trim() + "'") &&
+                //    nist.Existe("select count(*) from Test_Nist where Serialnumber = '" + txt_Serialnumber.Text.Trim() + "'") &&
+                //    coldSoak.Existe("select count(*) from Test_coldsoak where Serialnumber = '" + txt_Serialnumber.Text.Trim() + "'"))
+                //{
+                if (rf.Rf == false || current.CURRENT1 == false || nist.Nists == false)
+                {
+                    //test.Crud("insert into Log_Test values('Fail', '" + txt_Serialnumber.Text + "','" + DateTime.Now + "','" + operador.Id_operador + "')");
+                    test.Crud("insert into Log_Test(RF, Curr, Nist, ColdSoak, sn, TestDate, id_nemploy) values('" + rf.Status + "','" + current.Status + "','" + nist.Status + "','" + coldSoak.Status + "','" + txt_Serialnumber.Text.Trim() + "','" + DateTime.Now + "','" + operador.Id_operador + "')");
+
+                }
+                else
+                {
+                    test.Crud("insert into Log_Test(RF, Curr, Nist, ColdSoak, sn, TestDate, id_nemploy) values('" + rf.Status + "','" + current.Status + "','" + nist.Status + "','" + coldSoak.Status + "','" + txt_Serialnumber.Text.Trim() + "','" + DateTime.Now + "','" + operador.Id_operador + "')");
+                }
+
+                //}
+                //else
+                //    MessageBox.Show("Don't Exist");
+            }
+            catch (Exception)
+            {
+
+                //throw;
+            }
+
+        }
+
+
+
+
+        private void btn_Check_Enter(object sender, EventArgs e)
+        {
+            SendKeys.Send("{ENTER}");
+        }
+
+        private void btn_Check_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.SelectNextControl((Control)sender, true, true, true, true);
+            }
+        }
+    }
+}

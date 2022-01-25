@@ -1,0 +1,25 @@
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\DIGI-Shipping Test.csproj.AssemblyReference.cache
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\DIGI-Shipping Test.csproj.ResolveComReference.cache
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\DIGITrace.Batch.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\MWTrace_beta.Busqueda.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\MWTrace_beta.Ensamble_Etiquetado.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\DIGITrace.Error.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\MWTrace_beta.Especial.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\DIGITrace.Estatus.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\MWTrace_beta.Form1.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\MWTrace_beta.Historial.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\MWTrace_beta.IdentificarOrden.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\MWTrace_beta.Identificar_Operador.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\MWTrace_beta.Mantenimiento.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\MWTrace_beta.NuevaOrden.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\MWTrace_beta.Password.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\DIGITraceTest.Properties.Resources.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\MWTrace_beta.Retrabajo.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\MWTrace_beta.SerialNumber.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\MWTrace_beta.SetUps.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\MWTrace_beta.Shipping.resources
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\DIGI-Shipping Test.csproj.GenerateResource.cache
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\DIGI-Shipping Test.csproj.CoreCompileInputs.cache
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\DIGITrace-Test.TrustInfo.xml
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\DIGITrace-Test.exe
+C:\Users\leonel.valle\source\repos\DIGI_Project\MWTrace_betaTest\obj\Debug\DIGITrace-Test.pdb
